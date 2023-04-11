@@ -28,7 +28,8 @@ public class Carro implements Runnable {
             startTime = System.currentTimeMillis();
             SetSpeed(random.nextInt(8) + 1, time);
             SetPosition(time);
-            System.out.println(_name + " andou " + _offset + "m e já percorreu " + _position + "m");
+            if (time > 0)
+                System.out.println(_name + " andou " + _offset + "m e já percorreu " + _position + "m");
             time += System.currentTimeMillis() - startTime;
         }
         System.out.println(_name + " alcançou a linha de chegada");

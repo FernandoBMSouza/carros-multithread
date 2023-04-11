@@ -1,17 +1,26 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        Carro[] carros = new Carro[2];
-        carros[0] = new Carro("Carro_01");
-        carros[1] = new Carro("Carro_02");
 
-        Thread t1 = new Thread(carros[0]);
-        Thread t2 = new Thread(carros[1]);
+        int SIZE = 10;
+        Carro[] carros = new Carro[SIZE];
+        Thread[] threads = new Thread[SIZE];
+        String name;
 
-        t1.start();
-        t2.start();
+        for (int i = 0; i < SIZE; i++) {
+            name = "Carro_" + (i + 1);
+            carros[i] = new Carro(name);
+        }
 
-        t1.join();
-        t2.join();
+        for (int i = 0; i < SIZE; i++) {
+            threads[i] = new Thread(carros[i]);
+        }
 
+        for (Thread thread : threads) {
+            thread.start();
+        }
+
+        for (Thread thread : threads) {
+            thread.join();
+        }
     }
 }
