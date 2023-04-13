@@ -28,7 +28,7 @@ public class Carro implements Runnable {
             startTime = System.currentTimeMillis();
             SetSpeed(random.nextInt(8) + 1, time);
             SetPosition(time);
-            if (time > 0)
+            if (_position > 0)
                 System.out.println(_name + " andou " + _offset + "m e já percorreu " + _position + "m");
             time += System.currentTimeMillis() - startTime;
         }

@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        int SIZE = 10;
+        int SIZE = 2;
         Carro[] carros = new Carro[SIZE];
         Thread[] threads = new Thread[SIZE];
         String name;
