@@ -13,7 +13,7 @@ public class Carro implements Runnable {
         this.random = new Random();
     }
 
-    private void SetSpeed(int a, float t) {
+    private void SetSpeed(int a, long t) {
         _speed = _speed + a * t;
     }
 

@@ -6,6 +6,9 @@ public class Main {
         Thread[] threads = new Thread[SIZE];
         String name;
 
+        // Runtime runtime = Runtime.getRuntime();
+        // System.out.println(runtime.availableProcessors());
+
         for (int i = 0; i < SIZE; i++) {
             name = "Carro_" + (i + 1);
             carros[i] = new Carro(name);
